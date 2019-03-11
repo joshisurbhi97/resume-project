@@ -1,0 +1,31 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Work-Experience or Internship
+
+        </div>
+      <form [formGroup]="hobbyForm" (ngSubmit)="hobbyForm.valid && onHobbySubmit()" noValidators>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="strength" matInput formControlName="strength" [(ngModel)]="user.strength" placeholder="Strength"/>
+          </mat-form-field>
+
+          
+          <mat-form-field>
+              <input id="hobby" matInput formControlName="hobby" [(ngModel)]="user.hobby" placeholder="Hobby"/>
+         </mat-form-field>
+  
+         <div class="empty" style="height:200px;">
+
+          </div>
+
+          
+  
+  
+          <button mat-button type="submit" class="mat-raised-button mat-primary">Register</button>
+          <button mat-button routerLink="/login" class="divider">Login</button>
+  
+        </div>
+      </form>
+    </div>
+  </div>
+  

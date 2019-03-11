@@ -1,0 +1,45 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Personal Info
+        </div>
+      <form [formGroup]="personalinfoForm" (ngSubmit)="personalinfoForm.valid && onPersonalinfoSubmit()" noValidators>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="fullname" matInput formControlName="fullname" [(ngModel)]="user.fullname" placeholder="Enter your fullname"/>
+          </mat-form-field>
+
+          
+          <mat-form-field>
+              <input id="address" matInput formControlName="address" [(ngModel)]="user.address" placeholder="Enter your address"/>
+         </mat-form-field>
+  
+          <mat-form-field>
+            <input id="email" matInput formControlName="email" [(ngModel)]="user.email" placeholder="Enter your email"/>
+          </mat-form-field>
+          
+          <mat-form-field>
+              <input id="phoneno" matInput formControlName="phoneno" [(ngModel)]="user.phoneno" placeholder="Enter your phoneno"/>
+          </mat-form-field>
+            
+          <mat-form-field>
+              <input id="dob" matInput formControlName="dob" [(ngModel)]="user.dob" placeholder="Enter your dob"/>
+            </mat-form-field>
+            
+          <mat-form-field>
+              <input id="maritalStatus" matInput formControlName="maritalStatus" [(ngModel)]="user.maritalStatus" placeholder="Enter your maritalStatus"/>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input id="knownLanguage" matInput formControlName="knownLanguage" [(ngModel)]="user.knownLanguage" placeholder="Enter your knownLanguage"/>
+              </mat-form-field>
+          
+  
+  
+          <button mat-button type="submit" class="mat-raised-button mat-primary">Register</button>
+          <button mat-button routerLink="/login" class="divider">Login</button>
+  
+        </div>
+      </form>
+    </div>
+  </div>
+  

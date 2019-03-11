@@ -1,0 +1,35 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Education
+
+        </div>
+      <form [formGroup]="educationForm" (ngSubmit)="educationForm.valid && onEducationSubmit()" noValidators>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="qualification" matInput formControlName="qualification" [(ngModel)]="user.qualification" placeholder="Qualification"/>
+          </mat-form-field>
+
+          
+          <mat-form-field>
+              <input id="institute" matInput formControlName="institute" [(ngModel)]="user.institute" placeholder="Institute"/>
+         </mat-form-field>
+  
+          <mat-form-field>
+            <input id="percentage" matInput formControlName="percentage" [(ngModel)]="user.percentage" placeholder="Percentage"/>
+          </mat-form-field>
+          
+          <mat-form-field>
+              <input id="year" matInput formControlName="year" [(ngModel)]="user.year" placeholder="Year of passing"/>
+          </mat-form-field>
+            
+          
+  
+  
+          <button mat-button type="submit" class="mat-raised-button mat-primary">Register</button>
+          <button mat-button routerLink="/login" class="divider">Login</button>
+  
+        </div>
+      </form>
+    </div>
+  </div>
+  

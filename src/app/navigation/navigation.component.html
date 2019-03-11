@@ -1,0 +1,76 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span style="overflow:hidden; width:40px;"><img src="..//assets/mzl.ljwddsow.png" style="max-width: 100%"></span>
+    <span class="spacer"></span>
+
+    <button mat-button routerLink="/register">Register</button>
+    <button mat-button routerLink="/login">Login</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div style="width:300px;" class=" justify-content-center">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModalCenter">
+     TITLE  {{newTitle}}       </button>
+   
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           <input type="text" #title>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="modalTitle(title.value)">Save changes</button>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+
+
+   
+
+
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation side-nav">
+
+
+
+   
+
+
+
+  
+    <mat-nav-list>
+      <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+     <a mat-list-item [routerLink]="['personal']">Personal Info</a>
+     </div>
+      <a mat-list-item [routerLink]="['education']">Education</a>
+      <a mat-list-item [routerLink]="['experience']">Experience, Internship</a>
+      <a mat-list-item [routerLink]="['skills']">Skills</a>
+      <a mat-list-item [routerLink]="['certificate']">Courses/Certificates</a>
+      <a mat-list-item [routerLink]="['hobby']">Personal Strength & Hobby</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>

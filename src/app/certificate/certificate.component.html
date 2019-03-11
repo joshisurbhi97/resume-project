@@ -1,0 +1,72 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">
+        Courses / Certificate
+        </div>
+      <form [formGroup]="certificateForm" (ngSubmit)="certificateForm.valid && onCertificateSubmit()" noValidators>
+        <div class="form-container">
+          <h4>Certificate 1</h4>
+          <mat-form-field>
+            <input id="course" matInput formControlName="course" [(ngModel)]="user.course" placeholder="Name"/>
+          </mat-form-field>
+
+          
+          <mat-form-field>
+              <input id="from" matInput formControlName="from" [(ngModel)]="user.from" placeholder="Date from"/>
+         </mat-form-field>
+  
+          <mat-form-field>
+            <input id="to" matInput formControlName="to" [(ngModel)]="user.to" placeholder="Date to"/>
+          </mat-form-field>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" (click)="addExtra = true">
+              Add Extra
+            </button>
+          </div>
+      </form>
+
+      <form [formGroup]="certificateForm"  *ngIf="addExtra" (ngSubmit)="certificateForm.valid && onCertificateSubmit()" noValidators>
+          <div class="form-container">
+            <h4>Certificate 2</h4>
+            <mat-form-field>
+              <input id="course" matInput formControlName="course" [(ngModel)]="user.course" placeholder="Name"/>
+            </mat-form-field>
+  
+            
+            <mat-form-field>
+                <input id="from" matInput formControlName="from" [(ngModel)]="user.from" placeholder="Date from"/>
+           </mat-form-field>
+    
+            <mat-form-field>
+              <input id="to" matInput formControlName="to" [(ngModel)]="user.to" placeholder="Date to"/>
+            </mat-form-field>
+          </div>
+          <div class="row">
+              <button class="btn btn-primary" (click)="addExtra1 = true">
+                Add Extra
+              </button>
+            </div>
+        </form>
+
+        <form [formGroup]="certificateForm"  *ngIf="addExtra1" (ngSubmit)="certificateForm.valid && onCertificateSubmit()" noValidators>
+            <div class="form-container">
+              <h4>Certificate 3</h4>
+              <mat-form-field>
+                <input id="course" matInput formControlName="course" [(ngModel)]="user.course" placeholder="Name"/>
+              </mat-form-field>
+    
+              
+              <mat-form-field>
+                  <input id="from" matInput formControlName="from" [(ngModel)]="user.from" placeholder="Date from"/>
+             </mat-form-field>
+      
+              <mat-form-field>
+                <input id="to" matInput formControlName="to" [(ngModel)]="user.to" placeholder="Date to"/>
+              </mat-form-field>
+            </div>
+          </form>
+      
+    </div>
+  </div>
+  

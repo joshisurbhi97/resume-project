@@ -1,0 +1,171 @@
+<div class="medium-list">
+  <div class="list-viewer-wrapper">
+    <div class="list-header-title">Work-Experience or Internship</div>
+    <form
+      [formGroup]="skillForm"
+      (ngSubmit)="skillForm.valid && onSkillSubmit()"
+      noValidators
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            id="skill"
+            matInput
+            formControlName="skill"
+            [(ngModel)]="user.skill"
+            placeholder="Skill"
+          />
+        </mat-form-field>
+        <fieldset class="rating">
+          <!-- <legend>Please rate:</legend> -->
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+      </fieldset>
+
+        <div class="row">
+          <button class="btn btn-primary" (click)="addExtra = true">
+            Add Extra
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form
+      [formGroup]="skillForm"
+      (ngSubmit)="skillForm.valid && onSkillSubmit()"
+      *ngIf="addExtra"
+      noValidators
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            id="skill"
+            matInput
+            formControlName="skill"
+            [(ngModel)]="user.skill"
+            placeholder="Skill"
+          />
+        </mat-form-field>
+        <fieldset class="rating">
+          <!-- <legend>Please rate:</legend> -->
+          <input type="radio" id="star10" name="rating1" value="10" /><label for="star10"></label>
+          <input type="radio" id="star9" name="rating1" value="9" /><label for="star9"></label>
+          <input type="radio" id="star8" name="rating1" value="8" /><label for="star8"></label>
+          <input type="radio" id="star7" name="rating1" value="7" /><label for="star7"></label>
+          <input type="radio" id="star6" name="rating1" value="6" /><label for="star6"></label>
+      </fieldset>
+
+        <div class="row">
+          <button class="btn btn-primary" (click)="addExtra1 = true">
+            Add Extra
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form
+      [formGroup]="skillForm"
+      (ngSubmit)="skillForm.valid && onSkillSubmit()"
+      *ngIf="addExtra1"
+      noValidators
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            id="skill"
+            matInput
+            formControlName="skill"
+            [(ngModel)]="user.skill"
+            placeholder="Skill"
+          />
+        </mat-form-field>
+
+        <fieldset class="rating">
+          <!-- <legend>Please rate:</legend> -->
+          <input type="radio" id="star15" name="rating2" value="15" /><label for="star15"></label>
+          <input type="radio" id="star14" name="rating2" value="14" /><label for="star14"></label>
+          <input type="radio" id="star13" name="rating2" value="13" /><label for="star13"></label>
+          <input type="radio" id="star12" name="rating2" value="12" /><label for="star12"></label>
+          <input type="radio" id="star11" name="rating2" value="11" /><label for="star11"></label>
+      </fieldset>
+
+        <div class="row">
+          <button class="btn btn-primary" (click)="addExtra2 = true">
+            Add Extra
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form
+      [formGroup]="skillForm"
+      (ngSubmit)="skillForm.valid && onSkillSubmit()"
+      *ngIf="addExtra2"
+      noValidators
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            id="skill"
+            matInput
+            formControlName="skill"
+            [(ngModel)]="user.skill"
+            placeholder="Skill"
+          />
+        </mat-form-field>
+        <fieldset class="rating">
+          <!-- <legend>Please rate:</legend> -->
+          <input type="radio" id="star20" name="rating3" value="20" /><label for="star20"></label>
+          <input type="radio" id="star19" name="rating3" value="19" /><label for="star19"></label>
+          <input type="radio" id="star18" name="rating3" value="18" /><label for="star18"></label>
+          <input type="radio" id="star17" name="rating3" value="17" /><label for="star17"></label>
+          <input type="radio" id="star16" name="rating3" value="16" /><label for="star16"></label>
+      </fieldset>
+
+
+        <div class="row">
+          <button class="btn btn-primary" (click)="addExtra3 = true">
+            Add Extra
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form
+      [formGroup]="skillForm"
+      (ngSubmit)="skillForm.valid && onSkillSubmit()"
+      *ngIf="addExtra3"
+      noValidators
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            id="skill"
+            matInput
+            formControlName="skill"
+            [(ngModel)]="user.skill"
+            placeholder="Skill"
+          />
+        </mat-form-field>
+        <fieldset class="rating">
+          <!-- <legend>Please rate:</legend> -->
+          <input type="radio" id="star25"/><label for="star25"></label>
+          <input type="radio" id="star24"/><label for="star24"></label>
+          <input type="radio" id="star23"/><label for="star23"></label>
+          <input type="radio" id="star22"/><label for="star22"></label>
+          <input type="radio" id="star21"/><label for="star21"></label>
+      </fieldset>
+
+
+        <div class="row">
+          <button class="btn btn-primary" (click)="addExtra4 = true">
+            Add Extra
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

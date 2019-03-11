@@ -1,0 +1,76 @@
+<app-toolbar></app-toolbar>
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width" [formGroup]="myGroup">
+              <input matInput placeholder="Username" formControlName="email" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td><mat-form-field class="example-full-width" [formGroup]="myGroup">
+            <input matInput placeholder="Password" formControlName="password" type="password" name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" routerLink='/main'>Login</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<!-- <div class="container mt-5 box">
+  <h1 class="text-center">template driven Form</h1>
+  <form #myForm = ngForm (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+      <label>FirstName</label>
+      <input type="text" class="form-control" name="FirstName" [(ngModel)]="user.FirstName">
+    </div>
+    <div class="form-group">
+        <label>LastName</label>
+        <input type="text" class="form-control" name="LastName" [(ngModel)]="user.LastName">
+      </div>
+      <div class="form-group">
+          <label>Password</label>
+          <input type="Password" class="form-control" name="Password" [(ngModel)]="user.Password">
+        </div> 
+
+        <button class="btn btn-primary" routerLink='/main'>Login</button>
+  </form>
+</div>
+ -->
+
+
+ <div class="medium-list">
+  <div class="list-viewer-wrapper">
+    <div class="list-header-title">Register</div>
+    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginSubmit()" noValidators>
+      <div class="form-container">
+       <mat-form-field>
+          <input id="email" matInput formControlName="email" [(ngModel)]="user.email" placeholder="Enter your email"/>
+        </mat-form-field>
+        
+        <mat-form-field>
+          <input id="password" matInput formControlName="password" [(ngModel)]="user.password" placeholder="Enter your password" [type]= "!hide ? 'password':'text'"/>
+          <mat-icon matSuffix (click)="hide = !hide">
+            {{hide ? 'visibility' : 'visibility_off'}}
+          </mat-icon>
+        </mat-form-field>
+
+
+        <!-- <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">Login</button> -->
+        <button mat-button type="submit" class="mat-raised-button mat-primary" routerLink="/main">Login</button>
+
+        <button mat-button routerLink="/register" class="divider">Register</button>
+
+      </div>
+    </form>
+  </div>
+</div>
+
